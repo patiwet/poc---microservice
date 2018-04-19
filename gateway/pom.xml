@@ -4,18 +4,18 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>org.test</groupId>
-	<artifactId>lab-9-gateway-solution</artifactId>
+	<artifactId>gateway</artifactId>
 	<version>1</version>
 	<packaging>jar</packaging>
 
-	<name>lab-9-gateway-solution</name>
-	<description>Demo project for Spring Boot</description>
+	<name>gateway</name>
+	<description>gateway</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>1.5.2.RELEASE</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<relativePath/>
 	</parent>
 
 	<properties>
@@ -24,8 +24,6 @@
 		<java.version>1.8</java.version>
 	</properties>
 
-	<!-- We can't have two parent POMs, so use DependencyManagement 
-	to show Maven where the Spring Cloud dependencies are. -->
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -40,7 +38,6 @@
     
 	<dependencies>
 	
-		<!-- Needed since 1.0.2 -->
 		<dependency>
         	<groupId>org.springframework.cloud</groupId>
         	<artifactId>spring-cloud-starter-config</artifactId>
@@ -67,7 +64,6 @@
 			<scope>test</scope>
 		</dependency>
 
-		<!-- Allow for automatic restarts when classpath contents change. -->
 	    <dependency>
 	        <groupId>org.springframework.boot</groupId>
 	        <artifactId>spring-boot-devtools</artifactId>
